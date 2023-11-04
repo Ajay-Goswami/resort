@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Director from "../images/title/director.jpeg"
+import Director from "../images/title/director.jpg"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';

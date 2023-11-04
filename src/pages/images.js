@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import image1 from "../images/resort/1.jpeg"
-import image2 from "../images/resort/2.jpeg"
-import image3 from "../images/resort/3.jpeg"
-import image4 from "../images/resort/4.jpeg"
-import image5 from "../images/resort/5.jpeg"
-import image6 from "../images/resort/6.jpeg"
-import image7 from "../images/resort/7.jpeg"
-import image8 from "../images/resort/8.jpeg"
-import image9 from "../images/resort/9.jpeg"
-import image10 from "../images/resort/10.jpeg"
+import image1 from "../images/resort/1.jpg"
+import image2 from "../images/resort/2.jpg"
+import image3 from "../images/resort/3.jpg"
+import image4 from "../images/resort/4.jpg"
+import image5 from "../images/resort/5.jpg"
+import image6 from "../images/resort/6.jpg"
+import image7 from "../images/resort/7.jpg"
+import image8 from "../images/resort/8.jpg"
+import image9 from "../images/resort/9.jpg"
+import image10 from "../images/resort/10.jpg"
 import "../css/images.css"
 
 export default function Images() {

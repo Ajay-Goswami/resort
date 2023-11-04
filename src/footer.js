@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Chip } from '@mui/material';
-import logo from "./images/title/logo.jpeg"
+import logo from "./images/title/logo.jpg"
 import "./css/footer.css"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 // Import the icons you want to use
