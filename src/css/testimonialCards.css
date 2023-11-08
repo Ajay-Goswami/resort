@@ -30,8 +30,11 @@
   .testimonial-card{
     margin-left: 7.5vw;
     width: 15vw;
-    min-height: 18vw;
+    min-height: 20.5vw;
     
+  }
+  .testimonial-card-chip{
+    margin-top: 0.5vw;
   }
   @media (max-width: 600px)  {
     .testimonial-card{

@@ -30,7 +30,9 @@ export default function TestimonialCard(props) {
                     <div className="custom-text">
                     {result[props.number].description}
                     </div>
+                    <div className='testimonial-card-chip'>
                     <CustomChip label={<a className="custom-star" href=""> ★★★★  </a>} />
+                    </div>
                 </CardContent>
 
             </CardActionArea>
