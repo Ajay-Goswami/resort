@@ -26,20 +26,21 @@
   .more-rooms-button{
     font-size: 1.7vw;
     margin-left: 1vw;
-    color: #8A3324;
-    background-color: rgba(138, 51, 36, 0.3);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.625vw; /* 10px */
-border:0.2vw solid #8A3324;
+border:0.2vw solid black;
 cursor: pointer;
+font-weight: bold;
   }
   .booking-buttons{
     font-size: 1.7vw;
     margin-left: 1vw;
-    color: #8A3324;
-    background-color: rgba(138, 51, 36, 0.3);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.625vw; /* 10px */
-    border:0.2vw solid #8A3324;
-    cursor: pointer;
+    border:0.2vw solid black;
+    cursor: pointer;font-weight: bold;
   }
   .our-rooms-title {
     margin-top: 14vw;

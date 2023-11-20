@@ -7,14 +7,7 @@ import Chip from '@mui/material/Chip'
 import "../css/roomcards.css"
 import { styled } from '@mui/system';
 
-const CustomChip = styled(Chip)(({ theme }) => ({
-    backgroundColor: 'black',
-    height: '2vw',
-    '@media (max-width: 600px)': {
-        height: '5vw',
-    }
-    // Add more styles as needed
-}));
+
 
 export default function RoomCard({ openModal }) {
 
@@ -84,6 +77,8 @@ export default function RoomCard({ openModal }) {
             // You can also navigate to the login page or take other actions as needed
         }
         setBookingModalOpen(false)
+        alert("your room is booked"
+        )
     }
 
     /**/

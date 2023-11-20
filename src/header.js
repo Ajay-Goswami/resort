@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./css/header.css"
 import { useNavigate } from 'react-router-dom';
 // Import the necessary Font Awesome components
@@ -6,18 +6,18 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsApp from '@mui/icons-material/WhatsApp';
+import { useDispatch } from 'react-redux';
+import { loginSuccess } from './authentication/authActions';
 
 // Import the icons you want to use
 import { faHotel, } from '@fortawesome/free-solid-svg-icons';
-
-// Add the icons to the library
-
 
 
 const Header = () => {
   library.add(faHotel);
   const entireScreenWidth = window.innerHeight / 380
   console.log(entireScreenWidth)
+  const dispatch = useDispatch();
   const [loginStatus, setLoginStatus] = useState(false)
   const [registerStatus, setRegisterStatus] = useState(false)
   const [loginMail, setLoginMail] = useState("")
@@ -64,15 +64,15 @@ const Header = () => {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => {
-        if (response.status === 200) {
-          window.alert("Login successful");
-          setLoginStatus(true)
-          localStorage.setItem('email', loginMail);
-        } else if (response.status === 401) {
-          window.alert("Invalid email or password");
-        }
-      })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        window.alert("Login successful");
+        setLoginStatus(true);
+      } else {
+        window.alert("Invalid email or password");
+      }
+    })
       .catch((error) => {
         console.error("Error checking login:", error);
       });
@@ -137,6 +137,7 @@ const Header = () => {
   const closeRegisterModal = () => {
     setRegisterModalOpen(false);
   };
+  console.log(registerStatus)
   //<div style={{ marginLeft: "30px", cursor: 'pointer' ,color:"#F0E68C"}} onClick={() => navigate('/')} >Home</div>
   return (
     <div>
@@ -183,7 +184,7 @@ const Header = () => {
               Register
             </button>
             {loginStatus ? (
-              <span className="user-icon">👤</span>
+              <span className="user-icon">Log-out</span>
             ) : (
               <button className="login-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={() => openLoginModal()} disabled={loginStatus}>
                 Login
