@@ -32,6 +32,7 @@ const Header = () => {
     email: "",
     password: "",
   });
+  
   const handleWhatsAppClick = (phoneNumber) => {
     // Format the phone number to remove any non-numeric characters
     const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
@@ -66,7 +67,7 @@ const Header = () => {
     })
     .then((response) => response.json())
     .then((data) => {
-      if (data.success) {
+      if (data.message === "Login successful") {
         window.alert("Login successful");
         setLoginStatus(true);
       } else {
@@ -138,6 +139,11 @@ const Header = () => {
     setRegisterModalOpen(false);
   };
   console.log(registerStatus)
+  useEffect(() => {
+  }, [loginStatus]);
+  useEffect(() => {
+  }, [registerStatus]);
+  console.log(loginStatus)
   //<div style={{ marginLeft: "30px", cursor: 'pointer' ,color:"#F0E68C"}} onClick={() => navigate('/')} >Home</div>
   return (
     <div>
@@ -180,11 +186,11 @@ const Header = () => {
                 +91-971890521
               </span>
             </div>
-            <button className="register-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>
+            <button className="register-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={openRegisterModal} disabled={ loginStatus || registerStatus}>
               Register
             </button>
             {loginStatus ? (
-              <span className="user-icon">Log-out</span>
+              <button className="login-button">Log-out</button>
             ) : (
               <button className="login-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={() => openLoginModal()} disabled={loginStatus}>
                 Login
@@ -258,7 +264,7 @@ const Header = () => {
               <div class="registration-modal-form-columns">
                 <div class="registration-modal-left-column">
                   <div >
-                    <div class="registration-modal-form-label">*Photo</div>
+                    <div class="registration-modal-form-label">Photo</div>
                     <input class="registration-modal-form-input2" type="file" accept=".jpg, .jpeg, .png" onChange={handleChange} name="image" />
                   </div>
                 </div>
