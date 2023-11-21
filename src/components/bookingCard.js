@@ -3,19 +3,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { useMediaQuery } from '@mui/material';
 import "../css/booking.css"
+import { useSelector } from 'react-redux';
 
 export default function BookingCard() {
     const [checkInDate, setCheckInDate] = useState('');
     const [checkOutDate, setCheckOutDate] = useState('');
     const [adult, setAdult] = useState("");
     const [children, setChildren] = useState("");
-    const email = localStorage.getItem('email');
     const [type, setType] = useState("single");
-
-    console.log("b", email)
-
-
-    const changeHandler = (e) => {
+    const email = useSelector((state) => state.email);
+    console.log(email)
+const changeHandler = (e) => {
         const { name, value, } = e.target;
         if (name === 'from') {
             // Update the loginMail state when the email input changes

@@ -35,6 +35,8 @@
     
   }
   .testimonial-card-chip{
+    position:absolute;
+    top:18vw;
     margin-top: 0.5vw;
   }
   @media (max-width: 600px)  {

@@ -9,7 +9,9 @@
   .image-container {
     margin-top: 2.1875vw; 
   }
-  
+  .homepage-whatsapp-icon{
+    position:fixed;top:87vh;left: 95vw;z-index: 1000;
+  }
   .booking-card {
     position: absolute;
     top: 35vw; /* 150px */

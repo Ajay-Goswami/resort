@@ -22,8 +22,9 @@ import { BsFillCupHotFill } from "react-icons/bs";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
 import "../css/homepage.css"; // Import your CSS file
-
+import 'react-social-icons/whatsapp'
 import { styled } from '@mui/system';
+import { SocialIcon } from 'react-social-icons/component'
 
 const CustomChip = styled(Chip)(({ theme }) => ({
     backgroundColor: 'black',
@@ -58,7 +59,16 @@ const HomePage = () => {
     let p4 = "We have three in-house Ac banquet hall offering different hall that you can choose from.";
     let p5 = "We have in-house restaurants offering different Indian, South, cuisines taste that you can choose.";
 
-
+    const handleWhatsAppClick = (phoneNumber) => {
+        // Format the phone number to remove any non-numeric characters
+        const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
+    
+        // Construct the WhatsApp URL
+        const whatsappURL = `whatsapp://send?phone=${formattedPhoneNumber}`;
+    
+        // Attempt to open the WhatsApp app
+        window.location.href = whatsappURL;
+      };
 
     return (
         <div className="home-page-container">
@@ -151,6 +161,8 @@ const HomePage = () => {
             <div className="title-page">
                 <span>Reach Us</span>
             </div>
+            <div className='homepage-whatsapp-icon'>
+            <SocialIcon url="www.whatsapp.com" href="https://api.whatsapp.com/send?text=Welcome+to+The+Haweli+Resort!+Thank+you%20for%20connecting%20with%20us&phone=971890521"  /></div>
             <div className="reach-us-section">
                 <MapCard />
                 <div className="contact-details">

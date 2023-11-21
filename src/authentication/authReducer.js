@@ -1,24 +1,22 @@
-// authReducer.js
+// reducers.js
+import * as actionTypes from './actionTypes';
+
 const initialState = {
-    isLoggedIn: false,
-  };
-  
-  const authReducer = (state = initialState, action) => {
-    switch (action.type) {
-      case 'LOGIN_SUCCESS':
-        return {
-          ...state,
-          isLoggedIn: true,
-        };
-      case 'LOGOUT':
-        return {
-          ...state,
-          isLoggedIn: false,
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default authReducer;
-  
+  email: '',
+  // ... other initial state properties
+};
+
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case actionTypes.SET_EMAIL:
+      return {
+        ...state,
+        email: action.payload,
+      };
+    // ... other cases
+    default:
+      return state;
+  }
+};
+
+export default rootReducer;

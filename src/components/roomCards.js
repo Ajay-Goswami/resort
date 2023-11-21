@@ -6,17 +6,18 @@ import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
 import "../css/roomcards.css"
 import { styled } from '@mui/system';
-
+import { useSelector } from 'react-redux';
 
 
 export default function RoomCard({ openModal }) {
-
+    const email = useSelector((state) => state.auth.email);
+    console.log(email)
     const starStyle = {
         color: 'gold',
         fontsize: "1vw"
     };
     const [isBookingModalOpen, setBookingModalOpen] = useState(false);
-    const email = localStorage.getItem('email');
+    
     const [selectedRoom, setSelectedRoom] = useState('single');
     const openBookingModal = (event) => {
         setBookingModalOpen(true);
@@ -71,14 +72,13 @@ export default function RoomCard({ openModal }) {
                 .catch((error) => {
                     console.error(error);
                 });
+                alert("Thank You! Your room has been booked")
         } else {
             // If email is not present, show a warning to log in first
             alert('Please log in first to book a room.');
             // You can also navigate to the login page or take other actions as needed
         }
         setBookingModalOpen(false)
-        alert("your room is booked"
-        )
     }
 
     /**/

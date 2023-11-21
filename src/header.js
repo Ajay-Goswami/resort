@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsApp from '@mui/icons-material/WhatsApp';
 import { useDispatch } from 'react-redux';
-import { loginSuccess } from './authentication/authActions';
+import { setEmail } from './authentication/actions';
 
 // Import the icons you want to use
 import { faHotel, } from '@fortawesome/free-solid-svg-icons';
@@ -70,6 +70,7 @@ const Header = () => {
       if (data.message === "Login successful") {
         window.alert("Login successful");
         setLoginStatus(true);
+        dispatch(setEmail(loginMail));
       } else {
         window.alert("Invalid email or password");
       }
@@ -138,6 +139,9 @@ const Header = () => {
   const closeRegisterModal = () => {
     setRegisterModalOpen(false);
   };
+  const handlelogout = () => {
+    setLoginStatus(false)
+  };
   console.log(registerStatus)
   useEffect(() => {
   }, [loginStatus]);
@@ -190,7 +194,7 @@ const Header = () => {
               Register
             </button>
             {loginStatus ? (
-              <button className="login-button">Log-out</button>
+              <button className="login-button" onClick={handlelogout}>Logout</button>
             ) : (
               <button className="login-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={() => openLoginModal()} disabled={loginStatus}>
                 Login
