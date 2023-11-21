@@ -141,6 +141,7 @@ const Header = () => {
   };
   const handlelogout = () => {
     setLoginStatus(false)
+    dispatch(setEmail(null));
   };
   console.log(registerStatus)
   useEffect(() => {
