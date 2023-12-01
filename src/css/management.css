@@ -7,11 +7,18 @@
 }
 
 .management-page-container {
-    margin-top: 8vw;
-    margin-bottom: 18.5vw;
-    font-size: 2.5vw;
-    text-align: center;
-    font-weight: bold;
+    margin-top: 1vw;
+    
+    font-size: 1.3vw;
+}
+
+.facilities-list{
+    margin-top: 3rem;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
+
 }
 
 .management-page-card {
