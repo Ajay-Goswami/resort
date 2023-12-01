@@ -76,8 +76,9 @@ const changeHandler = (e) => {
                         <div className="form-group">
                             <label className='.booking-card-label'>Children</label>
                             <select className='booking-card-select' id="children" name="children" onChange={changeHandler}>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
+                                <option value="one">None</option>
+                                <option value="two">One</option>
+                                <option value="three">Two</option>
                                 <option value="three">Three</option>
                             </select>
                         </div>

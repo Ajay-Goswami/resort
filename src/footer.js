@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="nav-link" onClick={() => navigate('/faqs')}>
               FAQS
             </div>
-            <div className="nav-link" onClick={() => navigate('/offers')}>Offers</div>
+            <div className="nav-link" onClick={() => navigate('/images')}>Gallery</div>
             <div className="nav-link" onClick={() => navigate('/contactUs')}>
               Location
             </div>

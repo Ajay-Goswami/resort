@@ -81,12 +81,18 @@ const HomePage = () => {
                     <img src={logo} alt="logo" className="logo" />
                 </div>
                 <div className="buttons-container">
-                    <button className="more-rooms-button" onClick={() => navigate('/rooms')}>
-                        More Rooms
+                    <button className="more-rooms-button" onClick={() => navigate('/')}>
+                        Check Availability
                     </button>
                     <button className="booking-buttons" onClick={() => navigate('/rooms')}>
                         Book Now
                     </button>
+                    <a href="https://www.google.com/search?q=the+haweli+resorts+bihar&rlz=1C1RXQR_enIN1065IN1065&oq=the+haweli+resorts+bihar&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB7SAQg4MTgyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x398cffda9ed112b7:0xfbd08bbf8248e7d8,3,,,,&rlimm=18145156553316558808">
+
+                    <button className="booking-buttons">
+                        Add Reviews
+                    </button>
+                    </a>
                 </div>
             </div>
             <div className="our-rooms-title">

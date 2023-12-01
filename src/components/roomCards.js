@@ -92,7 +92,7 @@ export default function RoomCard({ openModal }) {
                         </Typography>
 
                         <div className='room1-card-price'>
-                            &#8377;200 per night
+                            &#8377;2500 per night
                         </div>
                         <div className="room-features-label">Features</div>
                         <div style={{ display: "flex",flexWrap:"wrap" }}>
