@@ -31,9 +31,9 @@ export default function RoomCard({ openModal }) {
     const getRoomPrice = () => {
         switch (selectedRoom) {
             case 'single':
-                return '₹200';
+                return '₹2500';
             case 'double':
-                return '₹300';
+                return '₹3000';
             case 'triple':
                 return '₹500';
             default:
@@ -140,7 +140,7 @@ export default function RoomCard({ openModal }) {
 
                     </div>
                     <div sx={{ whiteSpace: 'nowrap' }} style={{ textAlign: "center", marginLeft: "4vw" }}>
-                        <button style={{
+                        <button className='bookButton' style={{
                             fontSize: '1vw',
                             boxShadow: "0 0 2px 2px #8A3324",
                             padding: `${10 / 16}vw`, cursor: 'pointer', border: '3px solid #8A3324', borderRadius: `${40 / 16}vw`, fontWeight: "bold", backgroundColor: "#F0E68C", color: "#8A3324",

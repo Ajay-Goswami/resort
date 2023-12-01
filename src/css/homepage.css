@@ -451,8 +451,8 @@
 
   .homepage-whatsapp-icon {
     position: fixed;
-    top: 87vh;
-    right: 10vw;
+    top: 85vh;
+    right: 5vw;
     z-index: 1000;
   }
 }

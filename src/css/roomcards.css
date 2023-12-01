@@ -244,4 +244,10 @@ display:flex
   .room-card-full-container{
     margin-left:5vw;
   }
+
+  .bookButton{
+    width: 23vw;
+    height: 6vw;
+    font-size:4vw !important;
+  }
 }
