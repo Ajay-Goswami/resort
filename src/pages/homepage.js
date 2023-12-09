@@ -29,6 +29,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HomeTop from '../images/rooms/homeTop.svg'
+import OurRoomsCarousal from '../components/OurRoomsCarousal';
 
 const CustomChip = styled(Chip)(({ theme }) => ({
     backgroundColor: 'black',
@@ -115,14 +116,15 @@ const HomePage = () => {
             <div className="our-rooms-title">
                 <span>OUR ROOMS</span>
             </div>
-             <div className="rooms-section">
+             {/* <div className="rooms-section">
                 <div className="room-card">
                     <RoomCard />
                 </div>
                 <div className="image-card">
                     <RoomImages />
                 </div>
-            </div> 
+            </div>  */}
+            <OurRoomsCarousal/>
             <div className="more-facilities-button">
                 <button onClick={() => navigate('/rooms')}>More Rooms</button>
             </div>
