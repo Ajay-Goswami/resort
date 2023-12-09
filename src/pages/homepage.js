@@ -15,7 +15,7 @@ import facilityimage5 from "../images/facilities/5.jpg";
 import titleimage1 from "../images/title/1.jpg";
 import titleimage2 from "../images/title/2.jpg";
 import titleimage5 from "../images/title/5.jpg";
-import logo from "../images/title/logo.jpg";
+import logo from "../images/title/newLogo.webp";
 import RoomImages from '../components/roomImages';
 import RoomCard from '../components/roomCards';
 import { BsFillCupHotFill } from "react-icons/bs";
