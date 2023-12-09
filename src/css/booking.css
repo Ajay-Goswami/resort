@@ -1,5 +1,5 @@
 .my-booking-card{
-    width:85vw;
+    width:52vw;
     border-radius: 15px;
     background-color: rgba(255, 255, 150, 0.5);
 
@@ -12,6 +12,7 @@
 .form-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
   
   .form-group {

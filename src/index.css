@@ -7,9 +7,10 @@ body, h1, h2, h3, p {
   /* Apply some global styles to the body or other elements */
   body {
     font-family: Arial, sans-serif;
-    background-color:azure;
+    /* background-color:azure; */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
   
   /* Define styles for specific HTML elements */

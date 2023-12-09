@@ -18,6 +18,19 @@ const Footer = () => {
       <footer className='footer'>
         <div className='footer-container'>
           <div className='footer-section-title'>
+            
+          <div className="absolute-centered top-3">
+            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
+            <a className="footer-icon">THE HAWELI</a>
+            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
+          </div>
+          <div className="absolute-centered top-5">
+            Resort
+          </div>
+
+          <div className="absolute-centered top-10">
+            <img className="footer-image" src={logo} alt="My logo" />
+          </div>
             <div >
               <h2 className="main-heading">Home</h2>
             </div>
@@ -48,23 +61,7 @@ const Footer = () => {
             <div className="nav-link" onClick={() => navigate('/contactUs')}>
               Location
             </div>
-          </div>
-          <div className="absolute-centered top-1">
-            <Chip label={<span className="footer-chip1">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
-          </div>
-          <div className="absolute-centered top-3">
-            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
-            <a className="footer-icon">THE HAWELI</a>
-            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
-          </div>
-          <div className="absolute-centered top-5">
-            Resort
-          </div>
-          <div className="absolute-centered top-7">
-            <Chip label={<span className="footer-chip2">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
-          </div>
-          <div className="absolute-centered top-10">
-            <img className="footer-image" src={logo} alt="My logo" />
+            
           </div>
 
 

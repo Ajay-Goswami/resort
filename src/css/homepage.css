@@ -2,13 +2,34 @@
 
 /* Style for the image slider section */
 
+
 .main-image {
-  width: 100vw;
-  height: 35vw
+  width: 55vw;
+  height: 37vw;
+  position: absolute;
+  right: 0vw;
+  top: 3vw;
 }
 
 .image-container {
   margin-top: 2.1875vw;
+  min-height: 40vw;
+  height: auto;
+  width: 100vw;
+  position: relative;
+}
+
+.homeTopText {
+  color: #252525;
+  font-size: 4.2vw;
+  width: 43vw;
+  top: 9vw;
+  left: 6vw;
+  position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 .homepage-whatsapp-icon {
@@ -20,7 +41,7 @@
 
 .booking-card {
   position: absolute;
-  top: 35vw;
+  top: 29vw;
   /* 150px */
   background-color: transparent;
   margin-left: 6vw;
@@ -28,28 +49,49 @@
 
 .logo {
   position: absolute;
-  top: 5vw;
   /* 300px */
   /* 15px */
-  width: 7vw;
-  height: 4.5vw;
+  top: 3vw;
+  width: 6vw;
+
 }
 
 .more-rooms-button {
-  font-size: 1.7vw;
-  margin-left: 1vw;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.625vw;
-  /* 10px */
-  border: 0.2vw solid black;
-  cursor: pointer;
-  font-weight: bold;
-  width: 20vw;
+  font-size: 1.3vw;
+    margin-left: 1vw;
+    border-radius: 0.625vw;
+    background: #FF8935;
+    color:white;
+    border: 0vw solid black;
+    cursor: pointer;
+    font-weight: bold;
+    width: 15vw;
+}
+.more-rooms-button:active {
+  font-size: 1.3vw;
+    margin-left: 1vw;
+    background: #FF8935;
+    color:white;
+        border-radius: 0.625vw;
+    border: 0.2vw solid black;
+    cursor: pointer;
+    font-weight: bold;
+    width: 15vw;
+}
+.more-rooms-button:hover {
+  font-size: 1.3vw;
+    margin-left: 1vw;
+    background: #FF8935;
+    color:white;
+    border: 0vw solid black;
+        border-radius: 0.625vw;
+    cursor: pointer;
+    font-weight: bold;
+    width: 15vw;
 }
 
 .booking-buttons {
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   margin-left: 1vw;
   color: black;
   background-color: rgba(255, 255, 255, 0.5);
@@ -60,6 +102,12 @@
   font-weight: bold;
   width: 15vw;
   height: 4rem;
+}
+.booking-buttons:hover {
+  background: #FF8935;
+  color:white;
+  border: 0vw solid black;
+
 }
 
 .our-rooms-title {
@@ -105,8 +153,8 @@
 .buttons-container {
   position: absolute;
   display: flex;
-  top: 20vw;
-  left: 23vw;
+  top: 22vw;
+  left: 5vw;
   margin-right: 30vw;
 }
 
@@ -120,6 +168,51 @@
 }
 
 /* Styling for "OUR FACILITIES" section */
+
+.facilityBox {
+  width: 100vw;
+  min-height: 36vw;
+  height: auto;
+  background-color: #EAF0FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 20px 0;
+}
+
+.ServiceBox {
+  width: 100vw;
+  min-height: 29vw;
+  height: auto;
+  /* background-color: #EAF0FC; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 20px 0;
+  gap: 4vw;
+}
+
+.titlePage2 {
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+  font-size: 2.65vw;
+  /* Equivalent to 30/16vw */
+  font-weight: bold;
+  padding-left: 7vw;
+}
+
+.titlePage2 span {
+  display: inline-block;
+  font-weight: bold;
+  /* font-family: cursive;
+  color: #B8860B; */
+  top: 4vw;
+  left: 7vw;
+  position: absolute;
+}
+
 .facilities-section {
   display: flex;
   margin-left: 0vw;
@@ -127,14 +220,62 @@
   flex-wrap: wrap;
 }
 
+
 .facility-card {
   margin-left: 6.125vw;
   margin-top: 2vw;
 }
 
+.facility-card:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+
 .space {
   margin-left: 0.5vw;
 }
+
+.moreFacilitiesButton {
+  text-align: center;
+  /* margin-top: 3.25vw; */
+  /* 20px */
+}
+
+.moreFacilitiesButton button {
+  font-size: 1.2vw;
+  padding: 0.8vw;
+  cursor: pointer;
+  /* border: 0.125vw solid #8A3324; */
+  border-radius: 1.625vw;
+  font-weight: bold;
+  background-color: transparent;
+  /* color: gold; */
+  position: absolute;
+  top: 4vw;
+  right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreFacilitiesButton button:hover {
+  font-size: 1.2vw;
+  padding: 0.8vw;
+  cursor: pointer;
+  /* border: 0.125vw solid #8A3324; */
+  border-radius: 1.625vw;
+  font-weight: bolder;
+  background-color: black;
+  color: gold;
+  /* color: gold; */
+  position: absolute;
+  top: 4vw;
+  right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Additional Facility Cards should have specific class names */
 
@@ -163,9 +304,41 @@
 /* Styling for "TESTIMONIALS" section */
 .testimonials-section {
   display: flex;
-
-  margin-top: 5vw;
+  margin-top: 1vw;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.testimonialBox {
+  width: 100vw;
+  min-height: 40vw;
+  height: auto;
+  background-color: #EAF0FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 20px 0;
+}
+
+.titlePage3 {
+  margin-top: 4vw;
+  margin-bottom: 0.5vw;
+  font-size: 2.65vw;
+  font-weight: bold;
+  /* padding-left: 7vw; */
+  display: flex;
+  justify-content: center;
+}
+
+.titlePage3 span {
+  display: inline-block;
+  font-weight: bold;
+  font-family: cursive;
+  color: #B8860B;
+  /* top: 4vw;
+  left: 7vw;
+  position: absolute; */
 }
 
 
@@ -180,12 +353,13 @@
   display: flex;
   margin-top: 1vw;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
 }
 
 .service {
   text-align: center;
-  margin-left: 11vw;
+  /* margin-left: 11vw; */
 }
 
 .service-icon {
@@ -274,7 +448,7 @@
 
 
 /* Additional Social Media Links should have specific class names */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .image-slider img {
     top: 10vw;
     /* 35px */
@@ -326,10 +500,6 @@
     margin-top: 1vw;
     font-size: 3vw;
     width: 50vw;
-  }
-
-  .service {
-    margin-left: 30vw;
   }
 
   .reach-us-section {
@@ -455,4 +625,55 @@
     right: 5vw;
     z-index: 1000;
   }
+
+  .facilities-section {
+    display: flex;
+    margin-left: 0vw;
+    /* 90px */
+    flex-wrap: wrap;
+    margin-top: 9vw;
+    margin-bottom: 5vw;
+  }
+
+  .moreFacilitiesButton button {
+    font-size: 2.2vw;
+    padding: 0 0.8vw;
+
+  }
+
+  .titlePage2 {
+
+    font-size: 4.375vw;
+
+  }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .titlePage3 span {
+    font-size: 6vw;
+  }
+
+  .testimonialBox {
+    min-height: 166vw;
+    height: auto;
+  }
+
+  .main-image {
+    width: 100vw;
+    height: 35vw;
+    position: unset;
+    clip-path: none;
+
+  }
+
+  .image-container {
+    position: unset;
+  }
+
+  .homeTopText {
+    display: none;
+  }
+
 }

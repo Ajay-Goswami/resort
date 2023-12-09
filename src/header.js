@@ -163,6 +163,19 @@ const Header = () => {
       <div className='web-header'>
         <header className="fixed-header">
           <div className="header-container">
+          <div className="header-title">
+              <div
+                className="title"
+                onClick={() => navigate('/')}
+              >
+                <FontAwesomeIcon icon="fa-solid fa-hotel" />
+                <a style={{ marginLeft: '10px', cursor: "pointer" }}>THE HAWELI</a>
+                <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
+              </div>
+              <div style={{ cursor: "pointer" }} className="resort" onClick={() => navigate('/')}>
+                Resort
+              </div>
+            </div>
             <div className="header-content-container" >
               <div className="header-link" onClick={() => navigate('/about')}>
 
@@ -196,26 +209,14 @@ const Header = () => {
 Gallery
 </div> */}
             </div>
-            <div className="header-title">
-              <div
-                className="title"
-                onClick={() => navigate('/')}
-              >
-                <FontAwesomeIcon icon="fa-solid fa-hotel" />
-                <a style={{ marginLeft: '10px', cursor: "pointer" }}>THE HAWELI</a>
-                <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
-              </div>
-              <div style={{ cursor: "pointer" }} className="resort" onClick={() => navigate('/')}>
-                Resort
-              </div>
-            </div>
+            
             <div className="button-container">
-              <div className="whatsapp-container">
+              {/* <div className="whatsapp-container">
                 <div className="whatsapp-icon" onClick={() => handleWhatsAppClick('+971890521')} ><a style={{ fontSize: "1px" }}><WhatsApp /></a></div>
                 <span className="whatsapp-number" onClick={() => handleWhatsAppClick('+971890521')}>
                   +91-971890521
                 </span>
-              </div>
+              </div> */}
               <button className="register-button" style={{ backgroundColor: "gold", fontWeight: "bold" }} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>
                 Register
               </button>
@@ -336,7 +337,7 @@ Gallery
           </div>
         </nav>
         
-        <div className={`header-content-container modal-headerlist ${clicked ? `displayflex`:`displaynone`}`}  >
+        <div className={`header-content-container modal-headerlist mobbyContent ${clicked ? `displayflex`:`displaynone`}`}  >
               <div className="header-link" onClick={() => navigate('/about')}>
 
                 About Us

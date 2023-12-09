@@ -6,7 +6,7 @@
   width: 100vw;
   height:5vw;
 box-shadow: 0% 0.1333% 0.2667% rgba(0, 0, 0, 0.2);
-  background-color:black;
+  background-color:#ffffff;
   z-index:900;
 }
 
@@ -15,17 +15,18 @@ box-shadow: 0% 0.1333% 0.2667% rgba(0, 0, 0, 0.2);
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
+    padding: 10px 30px 0 30px;
   }
 .header-content-container {
   display: flex;
-  color: gold;
+  color: black;
 }
 .header-title{
   text-align: center;
-  color:gold;
+  color:black;
   font-size: 1.5vw;
   font-family: cursive;
-  margin-right: 10vw;
+  margin-right: 0vw;
 }
 
 .header-link {
@@ -36,7 +37,7 @@ box-shadow: 0% 0.1333% 0.2667% rgba(0, 0, 0, 0.2);
 
 
 .whatsapp-container {
-  color: gold;
+  color: black;
   margin-right: 0.75vw;
   display:flex;
 }
@@ -331,9 +332,17 @@ margin-left: 20vw; margin-right:15vw; margin-top: 4vw;
   display: none;
 }
 
+.mobbyContent{
+  display: none;
+}
+
 @media only screen and (max-width:786px){
   .web-header{
     display: none;
+  }
+
+  .mobbyContent{
+    display: flex;
   }
 
   .mob-header{
@@ -343,7 +352,7 @@ margin-left: 20vw; margin-right:15vw; margin-top: 4vw;
     align-items: center;
     width: 100vw;
     height: 74px;
-    background: #e5e5e5;
+    background: #000000;
   }
 
   .modal-headerlist{
@@ -372,7 +381,13 @@ margin-left: 20vw; margin-right:15vw; margin-top: 4vw;
   }
 
   .menu-header{
-    margin-right: 2vw;
+    margin-right: 5vw;
+    color: gold;
   }
+
+  .title{
+    margin-left: 4vw; 
+    color: gold;   
+   }
 }
 
