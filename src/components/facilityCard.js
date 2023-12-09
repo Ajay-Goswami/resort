@@ -8,8 +8,9 @@ import Chip from '@mui/material/Chip'
 export default function FacilityCard(props) {
 
     return (
-        <Card className='facility-card-card'>
-            <CardActionArea style={{ cursor: "auto" }}>
+        <Card className='facility-card-card' data-aos='zoom-in-up' data-aos-easing="ease-out-cubic"
+        data-aos-duration="700" data-aos-anchor-placement="bottom-bottom">
+            <CardActionArea className='facility-card-box'>
                 <img className='facility-card-image' src={props.image} alt="My Image" />
                 <CardContent>
                     <div className='facility-card-header' >

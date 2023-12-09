@@ -1,5 +1,5 @@
 .custom-card-content {
-    
+    display: flex;
 }
   
   .custom-title {
@@ -28,9 +28,8 @@
     
   }
   .testimonial-card{
-    margin-left: 7.5vw;
-    width: 15vw;
-    min-height: 22vw;
+    width: 17vw;
+    min-height: 23vw;
     
     
   }
@@ -41,7 +40,7 @@
   }
   @media (max-width: 600px)  {
     .testimonial-card{
-        margin-left: 10vw;
+        /* margin-left: 10vw; */
         width: 35vw;
         margin-top: 4vw;
       }
@@ -55,4 +54,13 @@
       .custom-star{
         font-size: 3vw;
       }
+
+      .testimonial-card-chip{
+       display: none;
+      }
+
+      .css-46bh2p-MuiCardContent-root {
+        padding: 3vw !important;
+    }
+    
   }

@@ -25,6 +25,10 @@ import "../css/homepage.css"; // Import your CSS file
 import 'react-social-icons/whatsapp'
 import { styled } from '@mui/system';
 import { SocialIcon } from 'react-social-icons/component'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import HomeTop from '../images/rooms/homeTop.svg'
 
 const CustomChip = styled(Chip)(({ theme }) => ({
     backgroundColor: 'black',
@@ -62,24 +66,37 @@ const HomePage = () => {
     const handleWhatsAppClick = (phoneNumber) => {
         // Format the phone number to remove any non-numeric characters
         const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
-    
+
         // Construct the WhatsApp URL
         const whatsappURL = `whatsapp://send?phone=${formattedPhoneNumber}`;
-    
+
         // Attempt to open the WhatsApp app
         window.location.href = whatsappURL;
-      };
+    };
+
+    AOS.init();
 
     return (
         <div className="home-page-container">
             <div className="image-container">
-                <img src={images[currentImage]} alt="My" className="main-image" />
+                {window.innerWidth<768 ?
+<img src={images[currentImage]} alt="My" className="main-image" /> :
+
+                <img src={HomeTop} data-aos='zoom-in-up' data-aos-easing="ease-out-cubic"
+                data-aos-duration="600" className="main-image" alt="not-available.."/>
+                }
+
                 <div className="booking-card">
                     <BookingCard />
                 </div>
                 <div className="logo-container">
                     <img src={logo} alt="logo" className="logo" />
                 </div>
+
+                <div className='homeTopText'>
+                    Discover a place you will love to live
+                    </div>  
+
                 <div className="buttons-container">
                     <button className="more-rooms-button" onClick={() => navigate('/')}>
                         Check Availability
@@ -89,27 +106,31 @@ const HomePage = () => {
                     </button>
                     <a href="https://www.google.com/search?q=the+haweli+resorts+bihar&rlz=1C1RXQR_enIN1065IN1065&oq=the+haweli+resorts+bihar&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB7SAQg4MTgyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x398cffda9ed112b7:0xfbd08bbf8248e7d8,3,,,,&rlimm=18145156553316558808">
 
-                    <button className="booking-buttons">
-                        Add Reviews
-                    </button>
+                        <button className="booking-buttons">
+                            Add Reviews
+                        </button>
                     </a>
                 </div>
             </div>
             <div className="our-rooms-title">
                 <span>OUR ROOMS</span>
             </div>
-            <div className="rooms-section">
+             <div className="rooms-section">
                 <div className="room-card">
                     <RoomCard />
                 </div>
                 <div className="image-card">
                     <RoomImages />
                 </div>
-            </div>
+            </div> 
             <div className="more-facilities-button">
                 <button onClick={() => navigate('/rooms')}>More Rooms</button>
             </div>
-            <div className="title-page">
+
+
+<section className='facilityBox'>
+
+            <div className="titlePage2">
                 <span>Our Facilities</span>
             </div>
             <div className="facilities-section">
@@ -124,51 +145,71 @@ const HomePage = () => {
                     <FacilityCard header={'Big Banquet Hall'} content={p4} image={facilityimage4} />
                 </div>
             </div>
-            <div className="more-facilities-button">
-                <button onClick={() => navigate('/facilities')}>More Facilities</button>
+            <div className="moreFacilitiesButton">
+                <button onClick={() => navigate('/facilities')}>See More <ArrowRightAltIcon/></button>
             </div>
-            <div className="title-page">
-                <span>Testimonials</span>
-            </div>
-            <div className="testimonials-section">
-                <TestimonialCard number='0'/>
-                <div >
-                    <TestimonialCard number='1'/>
-                </div>
-                <div >
-                    <TestimonialCard number='2'/>
-                </div>
-                <div>
-                    <TestimonialCard number='3'/>
-                </div>
-            </div>
-            <div className="title-page">
+</section>
+
+<section className='ServiceBox'>
+
+            <div className="titlePage3">
                 <span>Hotel Services</span>
             </div>
-            <div className="services-container">
-                <div className="service">
+            <div className="services-container" >
+                <div className="service" data-aos='fade-in-up' data-aos-easing="ease-out-cubic"
+        data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
                     <div className="service-icon"><FaCarSide /></div>
                     <div className="service-title">Travel Plan</div>
                     <div className="service-description">We at the hotel help you plan your travel to visit nearby places.</div>
                 </div>
 
-                <div className="service">
+                <div className="service" data-aos='fade-in-up' data-aos-easing="ease-out-cubic"
+        data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
                     <div className="service-icon"><MdOutlineFoodBank /></div>
                     <div className="service-title">Catering Service</div>
                     <div className="service-description">We at the hotel help you plan your travel to visit nearby places.</div>
                 </div>
 
-                <div className="service">
+                <div className="service" data-aos='fade-in-up' data-aos-easing="ease-out-cubic"
+        data-aos-duration="500" data-aos-anchor-placement="bottom-bottom">
                     <div className="service-icon"><BsFillCupHotFill /></div>
                     <div className="service-title">Multi-Cuisine Restaurant</div>
                     <div className="service-description">We at the hotel help you plan your travel to visit nearby places.</div>
                 </div>
             </div>
+</section>
+
+<section className='testimonialBox'>
+
+            <div className="titlePage3">
+                <span>Testimonials</span>
+            </div>
+            <div className="testimonials-section">
+                <div >
+
+                <TestimonialCard number='0' />
+                </div>
+                <div >
+                    <TestimonialCard number='1' />
+                </div>
+                <div >
+                    <TestimonialCard number='2' />
+                </div>
+                <div>
+                    <TestimonialCard number='3' />
+                </div>
+            </div>
+</section>
+
+
+
+
+
             <div className="title-page">
                 <span>Reach Us</span>
             </div>
             <div className='homepage-whatsapp-icon'>
-            <SocialIcon url="www.whatsapp.com" href="https://api.whatsapp.com/send?text=Welcome+to+The+Haweli+Resort!+Thank+you%20for%20connecting%20with%20us&phone=971890521"  /></div>
+                <SocialIcon url="www.whatsapp.com" href="https://api.whatsapp.com/send?text=Welcome+to+The+Haweli+Resort!+Thank+you%20for%20connecting%20with%20us&phone=971890521" /></div>
             <div className="reach-us-section">
                 <MapCard />
                 <div className="contact-details">

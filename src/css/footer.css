@@ -6,7 +6,7 @@
 }
 .footer-container{
     display: flex;
-    color: #F0E68C;
+    color: #FFFFFF;
     flex-wrap: wrap;
 }
 .footer-social-media-icons{
@@ -57,9 +57,14 @@
   .social-media-button1 {
     cursor: pointer;
     margin-left: 5vw;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     margin-bottom: 3.125vw;
     margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
   }
   .social-media-button {
     cursor: pointer;
@@ -67,6 +72,11 @@
     font-size: 1.5vw;
     margin-bottom: 3.125vw;
     margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
   }
   
   .footer-whatsapp-icon {
@@ -79,7 +89,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: #F0E68C;
+    color: #FFFFFF;
     font-size: 1.5vw;
     font-weight: bold;
     cursor: pointer;
@@ -88,11 +98,11 @@
   
   .footer-chip1 {
     font-size: 0.9375vw;
-    color: gold;
+    /* color: gold; */
   }
   .footer-chip2 {
     font-size: 0.9375vw;
-    color: gold;
+    /* color: gold; */
   }
   .footer-icon {
     font-size: 1.5vw;
@@ -124,7 +134,7 @@
   }
   
 
-@media (max-width: 600px)  {
+@media (max-width: 768px)  {
  .footer{   margin-top: 15vw
  }
 .footer-container{

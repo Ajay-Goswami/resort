@@ -20,10 +20,11 @@ export default function TestimonialCard(props) {
       }));
 
     return (
-        <Card className="testimonial-card" style={{boxShadow:" 0 0 6vw rgba(0, 0, 0, 0.6 )", backgroundColor:"lightyellow"}}>
+        <Card className="testimonial-card" style={{boxShadow:" 0 0 2vw rgba(0, 0, 0, 0.3 )", backgroundColor:"lightyellow"}} data-aos='zoom-in-up' data-aos-easing="ease-out-cubic"
+        data-aos-duration="700" data-aos-anchor-placement="center-bottom">
             <CardActionArea className="testimonial-card-container">
 
-                <CardContent className="custom-card-content">
+                <CardContent >
                     <div className="custom-title">
                         <NetworkWifiIcon />{result[props.number].title}
                     </div>
