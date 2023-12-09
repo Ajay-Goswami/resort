@@ -110,8 +110,8 @@
   }
   
   .footer-image {
-    width: 7vw;
-    height: 4vw;
+    /* width: 7vw; */
+    height: 5vw;
   }
   .top-1 {
     top: 1vw;
@@ -207,8 +207,8 @@
   }
   
   .footer-image {
-    width: 20vw;
-    height: 11vw;
+    /* width: 20vw; */
+    height: 13vw;
   }
   .top-1 {
     top: 2.5vw;

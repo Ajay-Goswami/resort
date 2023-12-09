@@ -15,7 +15,7 @@ import facilityimage5 from "../images/facilities/5.jpg";
 import titleimage1 from "../images/title/1.jpg";
 import titleimage2 from "../images/title/2.jpg";
 import titleimage5 from "../images/title/5.jpg";
-import logo from "../images/title/logo.jpg";
+import logo from "../images/title/newLogo.webp";
 import RoomImages from '../components/roomImages';
 import RoomCard from '../components/roomCards';
 import { BsFillCupHotFill } from "react-icons/bs";
@@ -29,6 +29,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HomeTop from '../images/rooms/homeTop.svg'
+import OurRoomsCarousal from '../components/OurRoomsCarousal';
 
 const CustomChip = styled(Chip)(({ theme }) => ({
     backgroundColor: 'black',
@@ -115,14 +116,15 @@ const HomePage = () => {
             <div className="our-rooms-title">
                 <span>OUR ROOMS</span>
             </div>
-             <div className="rooms-section">
+             {/* <div className="rooms-section">
                 <div className="room-card">
                     <RoomCard />
                 </div>
                 <div className="image-card">
                     <RoomImages />
                 </div>
-            </div> 
+            </div>  */}
+            <OurRoomsCarousal/>
             <div className="more-facilities-button">
                 <button onClick={() => navigate('/rooms')}>More Rooms</button>
             </div>
